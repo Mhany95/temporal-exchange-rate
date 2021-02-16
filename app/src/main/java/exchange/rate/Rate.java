@@ -6,5 +6,5 @@ import io.temporal.activity.ActivityMethod;
 @ActivityInterface
 public interface Rate {
     @ActivityMethod
-    Double inverse(Double value);
+    Double inverse(Double value) throws Exception;
 }
