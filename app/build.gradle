@@ -31,3 +31,13 @@ application {
     // Define the main class for the application.
     mainClass = 'exchange.rate.App'
 }
+
+task startRateWorker(type: JavaExec) {
+    main = 'exchange.rate.RateWorker'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task getRate(type: JavaExec) {
+    main = 'exchange.rate.StartRateWorkflow'
+    classpath = sourceSets.main.runtimeClasspath
+}
