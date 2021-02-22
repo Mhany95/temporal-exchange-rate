@@ -24,12 +24,15 @@ dependencies {
     implementation 'com.google.guava:guava:29.0-jre'
     implementation 'io.temporal:temporal-sdk:1.0.0'
     implementation 'ch.qos.logback:logback-classic:1.2.3'
+    compile 'io.vertx:vertx-web:4.0.2'
+    implementation(platform("io.vertx:vertx-stack-depchain:4.0.2"))
 
 }
 
 application {
     // Define the main class for the application.
-    mainClass = 'exchange.rate.App'
+    //mainClass = 'exchange.rate.App'
+    mainClass = 'vertx.exchange.rate.MainVerticle'
 }
 
 task startRateWorker(type: JavaExec) {
